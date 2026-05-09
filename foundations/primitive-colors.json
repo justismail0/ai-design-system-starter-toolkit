@@ -1,0 +1,94 @@
+{
+  "$collection": "Primitive: Colors",
+  "$slug": "primitive-colors",
+  "$modes": ["Value"],
+  "$defaultMode": "Value",
+  "base": {
+    "black": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#000000" } },
+    "white": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFFFFF" } }
+  },
+  "blue": {
+    "50":  { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#EFF6FF" } },
+    "100": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#D1E9FF" } },
+    "200": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#B2DDFF" } },
+    "300": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#84CAFF" } },
+    "400": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#53B0FD" } },
+    "500": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#2E90FA" } },
+    "600": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#156FEE" } },
+    "700": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#175CD3" } },
+    "800": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#1849A9" } },
+    "900": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#194084" } }
+  },
+  "green": {
+    "50":  { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#EDFAF2" } },
+    "100": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#D1F2E0" } },
+    "200": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#A7E5C3" } },
+    "300": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#6DD5A0" } },
+    "400": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#22C55E" } },
+    "500": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#008759" } },
+    "600": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#1B5E3B" } },
+    "700": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#006B47" } },
+    "800": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#004D33" } },
+    "900": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#003322" } }
+  },
+  "neutral": {
+    "50":  { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#F9FAFB" } },
+    "100": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#F5F5F5" } },
+    "200": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#E9EAEB" } },
+    "300": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#D5D7DA" } },
+    "400": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#A4A7AE" } },
+    "500": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#717680" } },
+    "600": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#535861" } },
+    "700": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#414651" } },
+    "800": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#252B37" } },
+    "900": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#181D27" } }
+  },
+  "orange": {
+    "50":  { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFF8E1" } },
+    "100": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFECB3" } },
+    "200": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFE082" } },
+    "300": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFD54F" } },
+    "400": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFCA28" } },
+    "500": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FF9500" } },
+    "600": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FB8C00" } },
+    "700": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#F57C00" } },
+    "800": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#EF6C00" } },
+    "900": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#E65100" } }
+  },
+  "red": {
+    "50":  { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFF5F5" } },
+    "100": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FEE2E2" } },
+    "200": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FECACA" } },
+    "300": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FCA5A5" } },
+    "400": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#F87171" } },
+    "500": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#E53935" } },
+    "600": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#DC2626" } },
+    "700": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#B91C1C" } },
+    "800": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#991B1B" } },
+    "900": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#7F1D1D" } }
+  },
+  "teal": {
+    "50":  { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#E6FAF7" } },
+    "100": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#B3F0E8" } },
+    "200": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#80E6D9" } },
+    "300": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#4DDCCA" } },
+    "400": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#26D4BF" } },
+    "500": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#14C8B0" } },
+    "600": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#10A693" } },
+    "700": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#0C8476" } },
+    "800": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#08635A" } },
+    "900": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#04423D" } }
+  },
+  "yellow": {
+    "50":  { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFFDE7" } },
+    "100": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFF9C4" } },
+    "200": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFF59D" } },
+    "300": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFF176" } },
+    "400": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFEE58" } },
+    "500": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFD600" } },
+    "600": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFC400" } },
+    "700": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFB300" } },
+    "800": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FFA000" } },
+    "900": { "$type": "COLOR", "$scopes": ["ALL_FILLS", "STROKE_COLOR", "EFFECT_COLOR"], "$values": { "Value": "#FF8F00" } }
+  }
+}

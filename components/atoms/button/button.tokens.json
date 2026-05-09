@@ -1,0 +1,153 @@
+{
+  "$source": "figma://file/vdVmrWthRNIyM1lf2XThdZ?node-id=106:43",
+  "$component": "Button",
+  "$figmaNodeId": "106:43",
+  "$description": "Standalone interactive button. Three style families, three sizes, and an icon-only mode combine into 18 variants. Anatomy: LeftIcon · Label · RightIcon, centered horizontal flex. Label is hidden when IconOnly=true; in that mode the LeftIcon slot carries the single visible glyph.",
+
+  "$variants": {
+    "Style":    ["primary", "secondary", "tertiary"],
+    "Size":     ["sm", "md", "lg"],
+    "IconOnly": ["false", "true"]
+  },
+
+  "$properties": {
+    "Label":           { "type": "TEXT",          "default": "Button" },
+    "Show left icon":  { "type": "BOOLEAN",       "default": false },
+    "Show right icon": { "type": "BOOLEAN",       "default": false },
+    "Left icon":       { "type": "INSTANCE_SWAP", "default": "26:424" },
+    "Right icon":      { "type": "INSTANCE_SWAP", "default": "26:349" }
+  },
+
+  "$anatomy": [
+    { "node": "container", "type": "FRAME",    "role": "wrapper, holds the row" },
+    { "node": "LeftIcon",  "type": "INSTANCE", "role": "leading-icon slot; visibility driven by 'Show left icon' on IconOnly=false variants and hardcoded true on IconOnly=true variants" },
+    { "node": "Label",     "type": "TEXT",     "role": "label; visibility hardcoded false on IconOnly=true variants" },
+    { "node": "RightIcon", "type": "INSTANCE", "role": "trailing-icon slot; visibility driven by 'Show right icon' on IconOnly=false variants and hardcoded false on IconOnly=true variants" }
+  ],
+
+  "$layout": {
+    "layoutMode": "HORIZONTAL",
+    "primaryAxisAlignItems": "CENTER",
+    "counterAxisAlignItems": "CENTER",
+    "counterAxisSizingMode": "FIXED",
+    "primaryAxisSizingMode": { "default": "AUTO", "icon-only": "FIXED" },
+    "padding-top":    { "$alias": "{semantic-size.spacing.none}" },
+    "padding-bottom": { "$alias": "{semantic-size.spacing.none}" },
+    "border-radius":  { "$alias": "{semantic-size.border-radius.md}" },
+    "stroke":         null
+  },
+
+  "size": {
+    "sm": {
+      "height":    { "$alias": "{semantic-size.component-height.sm}" },
+      "padding-x": { "$alias": "{semantic-size.spacing.md}" },
+      "gap":       { "$alias": "{semantic-size.spacing.xs}" },
+      "icon-size": { "$alias": "{semantic-size.icon.sm}" },
+      "icon-only": {
+        "width":     { "$alias": "{semantic-size.component-height.sm}" },
+        "padding-x": { "$alias": "{semantic-size.spacing.sm}" }
+      }
+    },
+    "md": {
+      "height":    { "$alias": "{semantic-size.component-height.md}" },
+      "padding-x": { "$alias": "{semantic-size.spacing.lg}" },
+      "gap":       { "$alias": "{semantic-size.spacing.sm}" },
+      "icon-size": { "$alias": "{semantic-size.icon.md}" },
+      "icon-only": {
+        "width":     { "$alias": "{semantic-size.component-height.md}" },
+        "padding-x": { "$alias": "{semantic-size.spacing.sm}" }
+      }
+    },
+    "lg": {
+      "height":    { "$alias": "{semantic-size.component-height.lg}" },
+      "padding-x": { "$alias": "{semantic-size.spacing.xl}" },
+      "gap":       { "$alias": "{semantic-size.spacing.sm}" },
+      "icon-size": { "$alias": "{semantic-size.icon.lg}" },
+      "icon-only": {
+        "width":     { "$alias": "{semantic-size.component-height.lg}" },
+        "padding-x": { "$alias": "{semantic-size.spacing.sm}" }
+      }
+    }
+  },
+
+  "style": {
+    "primary": {
+      "default": {
+        "background": { "$alias": "{semantic-colors.background.brand.solid}" },
+        "border":     null,
+        "text":       { "$alias": "{semantic-colors.text.primary.default}" },
+        "icon":       null
+      },
+      "hover": {
+        "background": { "$alias": "{semantic-colors.background.brand.solid-focus}" }
+      },
+      "disabled": {
+        "background": { "$alias": "{semantic-colors.background.brand.disabled}" },
+        "text":       { "$alias": "{semantic-colors.text.primary.disabled}" },
+        "icon":       { "$alias": "{semantic-colors.icon.primary.disabled}" }
+      }
+    },
+    "secondary": {
+      "default": {
+        "background": { "$alias": "{semantic-colors.background.secondary.default}" },
+        "border":     null,
+        "text":       { "$alias": "{semantic-colors.text.primary.default}" },
+        "icon":       null
+      },
+      "hover": {
+        "background": { "$alias": "{semantic-colors.background.secondary.default-focus}" }
+      },
+      "disabled": {
+        "text": { "$alias": "{semantic-colors.text.primary.disabled}" },
+        "icon": { "$alias": "{semantic-colors.icon.primary.disabled}" }
+      }
+    },
+    "tertiary": {
+      "default": {
+        "background": null,
+        "border":     null,
+        "text":       { "$alias": "{semantic-colors.text.brand.default}" },
+        "icon":       null
+      },
+      "hover": {},
+      "disabled": {
+        "text": { "$alias": "{semantic-colors.text.primary.disabled}" },
+        "icon": { "$alias": "{semantic-colors.icon.primary.disabled}" }
+      }
+    }
+  },
+
+  "typography": {
+    "sm": {
+      "font-family": { "$alias": "{semantic-typography.font-family.text}" },
+      "font-style":  { "$alias": "{semantic-typography.font-weight.medium}" },
+      "font-size":   { "$alias": "{semantic-typography.font-size.text-sm}" },
+      "line-height": { "$alias": "{semantic-typography.line-height.text-sm}" }
+    },
+    "md": {
+      "font-family": { "$alias": "{semantic-typography.font-family.text}" },
+      "font-style":  { "$alias": "{semantic-typography.font-weight.medium}" },
+      "font-size":   { "$alias": "{semantic-typography.font-size.text-md}" },
+      "line-height": { "$alias": "{semantic-typography.line-height.text-md}" }
+    },
+    "lg": {
+      "font-family": { "$alias": "{semantic-typography.font-family.text}" },
+      "font-style":  { "$alias": "{semantic-typography.font-weight.medium}" },
+      "font-size":   { "$alias": "{semantic-typography.font-size.text-lg}" },
+      "line-height": { "$alias": "{semantic-typography.line-height.text-lg}" }
+    }
+  },
+
+  "focus": {},
+
+  "$notes": {
+    "states-not-built-as-variants": "Hover and disabled bindings above are recorded for downstream consumers — they are NOT implemented as Figma variants. Only the default state of each (Style × Size × IconOnly) combination is rendered.",
+    "active-state-no-token": "No semantic token covers the active/pressed state. Stopgap: CSS filter: brightness(0.95). System-level gap.",
+    "icon-color-binding-gap": "Audit returned colorVar:null for every LeftIcon and RightIcon across all 18 variants — no variable binding was detected on the inner icon vector fills at the variant level. The component-set description claims icon colors of icon/primary/default (primary, secondary) and icon/brand/default (tertiary), but the audit could not confirm those bindings on the variant nodes. The 'icon' field under each style.<state> block is therefore intent-only here, not a recorded binding. Possible causes: (a) bindings live on overrides not surfaced by findAll on instances, (b) bindings were lost across the clone passes that produced the variants. Re-binding pass recommended.",
+    "disabled-bg-gap-secondary-tertiary": "Only background/brand/disabled exists as a semantic disabled-bg token. Secondary and tertiary disabled blocks intentionally omit a 'background' alias — bg stays at default state; the disabled affordance is carried entirely by text and icon color.",
+    "tertiary-hover-undefined": "The component-set description proposes background/brand/default as a tertiary hover treatment but no token authoritatively covers tertiary hover. The hover block under style.tertiary is left empty.",
+    "focus-state-empty": "No focus-visible state implemented. focus block is empty by design.",
+    "border": "Every variant has strokes:[]. The 'border' field is null in every style.<state> block — Button does not use a stroke binding.",
+    "icon-only-visibility-detach": "On IconOnly=true variants, LeftIcon and RightIcon nodes have their 'visible' componentPropertyReferences detached (only 'mainComponent' ref kept) and visible is hardcoded — true for LeftIcon, false for RightIcon. This is required because Figma boolean visibility properties bound to a node's 'visible' field are shared globally across all variants of a set; without the detach, toggling 'Show left icon' would reach into IconOnly=true variants and misalign the icon-only intent."
+  }
+}

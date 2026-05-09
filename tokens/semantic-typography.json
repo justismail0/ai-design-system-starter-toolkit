@@ -1,0 +1,41 @@
+{
+  "$collection": "Semantic: Typography",
+  "$slug": "semantic-typography",
+  "$modes": ["Value"],
+  "$defaultMode": "Value",
+  "font-family": {
+    "headline": { "$type": "STRING", "$scopes": ["FONT_FAMILY"], "$values": { "Value": { "$alias": "primitive-typography.font-family.inter" } } },
+    "text":     { "$type": "STRING", "$scopes": ["FONT_FAMILY"], "$values": { "Value": { "$alias": "primitive-typography.font-family.inter" } } }
+  },
+  "font-size": {
+    "headline-xs":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.6" } } },
+    "headline-sm":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.7" } } },
+    "headline-md":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.8" } } },
+    "headline-lg":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.10" } } },
+    "headline-xl":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.11" } } },
+    "headline-2xl": { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.12" } } },
+    "text-xs":      { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.1" } } },
+    "text-sm":      { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.2" } } },
+    "text-md":      { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.3" } } },
+    "text-lg":      { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.4" } } },
+    "text-xl":      { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": { "$alias": "primitive-typography.font-size.5" } } }
+  },
+  "font-weight": {
+    "regular": { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": { "$alias": "primitive-typography.font-weight.regular" } } },
+    "medium":  { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": { "$alias": "primitive-typography.font-weight.medium" } } },
+    "bold":    { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": { "$alias": "primitive-typography.font-weight.bold" } } }
+  },
+  "line-height": {
+    "headline-xs":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.6" } } },
+    "headline-sm":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.7" } } },
+    "headline-md":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.8" } } },
+    "headline-lg":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.11" } } },
+    "headline-xl":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.12" } } },
+    "headline-2xl": { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.14" } } },
+    "text-xs":      { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.1" } } },
+    "text-sm":      { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.2" } } },
+    "text-md":      { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.3" } } },
+    "text-lg":      { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.4" } } },
+    "text-xl":      { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": { "$alias": "primitive-typography.line-height.5" } } }
+  }
+}

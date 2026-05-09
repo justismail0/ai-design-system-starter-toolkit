@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Button — Keeta Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ==========================================================
+     Token tier — primitives (foundations/*.json)
+     ========================================================== */
+  :root {
+    /* Primitive: Colors (used by Button) */
+    --c-yellow-500: #FFD600;
+    --c-yellow-600: #FFC400;
+    --c-yellow-700: #FFB300;
+    --c-neutral-200: #E9EAEB;
+    --c-neutral-300: #D5D7DA;
+    --c-neutral-400: #A4A7AE;
+    --c-neutral-700: #414651;
+    --c-neutral-900: #181D27;
+    --c-base-white: #FFFFFF;
+
+    /* Primitive: Size scale (used by Button) */
+    --scale-0: 0px;
+    --scale-4: 4px;
+    --scale-8: 8px;
+    --scale-12: 12px;
+    --scale-16: 16px;
+    --scale-20: 20px;
+    --scale-24: 24px;
+    --scale-36: 36px;
+    --scale-44: 44px;
+    --scale-48: 48px;
+
+    /* Primitive: Typography (used by Button) */
+    --ff-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --fs-2: 12px; --fs-3: 16px; --fs-4: 20px;
+    --lh-2: 20px; --lh-3: 24px; --lh-4: 28px;
+  }
+
+  /* ==========================================================
+     Token tier — semantics (tokens/*.json)
+     Each value aliases a primitive above.
+     ========================================================== */
+  :root {
+    /* Semantic: Colors — Light mode (used by Button) */
+    --sem-bg-brand-solid:           var(--c-yellow-500);
+    --sem-bg-brand-solid-focus:     var(--c-yellow-600);
+    --sem-bg-brand-disabled:        var(--c-neutral-300);
+    --sem-bg-secondary-default:     var(--c-neutral-200);
+    --sem-bg-secondary-default-foc: var(--c-neutral-200); /* same primitive in this token; documented gap */
+    --sem-text-primary-default:     var(--c-neutral-900);
+    --sem-text-primary-disabled:    var(--c-neutral-400);
+    --sem-text-brand-default:       var(--c-yellow-700);
+    --sem-icon-primary-default:     var(--c-neutral-900);
+    --sem-icon-primary-disabled:    var(--c-neutral-400);
+    --sem-icon-brand-default:       var(--c-yellow-700);
+
+    /* Semantic: Size */
+    --sem-space-none: var(--scale-0);
+    --sem-space-xs:   var(--scale-4);
+    --sem-space-sm:   var(--scale-8);
+    --sem-space-md:   var(--scale-12);
+    --sem-space-lg:   var(--scale-16);
+    --sem-space-xl:   var(--scale-20);
+    --sem-radius-md:  var(--scale-12);
+    --sem-ch-sm:      var(--scale-36);
+    --sem-ch-md:      var(--scale-44);
+    --sem-ch-lg:      var(--scale-48);
+    --sem-icon-sm:    var(--scale-16);
+    --sem-icon-md:    var(--scale-20);
+    --sem-icon-lg:    var(--scale-24);
+
+    /* Semantic: Typography */
+    --sem-ff-text:    var(--ff-inter);
+    --sem-fw-medium:  500; /* Inter Medium */
+    --sem-fs-text-sm: var(--fs-2);
+    --sem-fs-text-md: var(--fs-3);
+    --sem-fs-text-lg: var(--fs-4);
+    --sem-lh-text-sm: var(--lh-2);
+    --sem-lh-text-md: var(--lh-3);
+    --sem-lh-text-lg: var(--lh-4);
+  }
+
+  /* ==========================================================
+     Doc-page chrome
+     ========================================================== */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--ff-inter);
+    color: var(--c-neutral-900);
+    background: #FAFAFA;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  main { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+
+  h1 { font-size: 36px; line-height: 1.2; margin: 0 0 8px; font-weight: 700; letter-spacing: -0.01em; }
+  h2 { font-size: 22px; line-height: 1.3; margin: 56px 0 12px; font-weight: 700; padding-top: 24px; border-top: 1px solid var(--c-neutral-200); letter-spacing: -0.005em; }
+  h3 { font-size: 16px; line-height: 1.4; margin: 28px 0 10px; font-weight: 600; color: var(--c-neutral-900); }
+  h4 { font-size: 13px; line-height: 1.4; margin: 18px 0 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--c-neutral-700); }
+  p, li { color: var(--c-neutral-700); }
+  p { margin: 0 0 12px; }
+  code, .alias { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; padding: 1px 6px; background: var(--c-neutral-200); border-radius: 3px; color: var(--c-neutral-900); }
+
+  .meta {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--c-neutral-700);
+    margin: 0 0 8px;
+  }
+  .lede { font-size: 16px; line-height: 1.55; max-width: 640px; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--c-neutral-200); vertical-align: top; }
+  th { font-weight: 600; color: var(--c-neutral-900); background: #FAFAFA; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .surface { background: var(--c-base-white); padding: 24px; border: 1px solid var(--c-neutral-200); border-radius: 8px; }
+  .surface + .surface { margin-top: 12px; }
+  .row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+  .stack { display: flex; flex-direction: column; gap: 24px; }
+  .grid-row { display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: center; padding: 12px 0; border-bottom: 1px dashed var(--c-neutral-200); }
+  .grid-row:last-child { border-bottom: 0; }
+  .grid-row .lab { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--c-neutral-700); }
+
+  .anatomy-diagram {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sem-space-sm);
+    padding: var(--sem-space-none) var(--sem-space-lg);
+    height: var(--sem-ch-md);
+    background: var(--sem-bg-brand-solid);
+    border-radius: var(--sem-radius-md);
+    color: var(--sem-text-primary-default);
+    font-weight: var(--sem-fw-medium);
+    font-size: var(--sem-fs-text-md);
+  }
+  .anatomy-piece {
+    padding: 2px 8px;
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  .note {
+    padding: 14px 16px;
+    background: #FFF8E1;
+    border-left: 3px solid var(--c-yellow-600);
+    border-radius: 4px;
+    margin: 8px 0;
+  }
+  .note p { margin: 0; font-size: 13px; color: var(--c-neutral-700); }
+  .note p strong { color: var(--c-neutral-900); }
+
+  /* ==========================================================
+     Component — .btn
+     Every property below resolves through a semantic token.
+     ========================================================== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 0;
+    cursor: pointer;
+    font-family: var(--sem-ff-text);
+    font-weight: var(--sem-fw-medium);
+    padding-top: var(--sem-space-none);
+    padding-bottom: var(--sem-space-none);
+    border-radius: var(--sem-radius-md);
+    text-decoration: none;
+    transition: background-color 80ms ease, color 80ms ease, filter 80ms ease;
+  }
+  .btn:focus-visible { outline: 2px solid var(--c-yellow-700); outline-offset: 2px; }
+  .btn:active { filter: brightness(0.95); } /* active stopgap — no semantic token */
+  .btn:disabled, .btn.is-disabled { cursor: not-allowed; }
+
+  /* Size */
+  .btn--sm { height: var(--sem-ch-sm); padding-left: var(--sem-space-md); padding-right: var(--sem-space-md); gap: var(--sem-space-xs); font-size: var(--sem-fs-text-sm); line-height: var(--sem-lh-text-sm); }
+  .btn--md { height: var(--sem-ch-md); padding-left: var(--sem-space-lg); padding-right: var(--sem-space-lg); gap: var(--sem-space-sm); font-size: var(--sem-fs-text-md); line-height: var(--sem-lh-text-md); }
+  .btn--lg { height: var(--sem-ch-lg); padding-left: var(--sem-space-xl); padding-right: var(--sem-space-xl); gap: var(--sem-space-sm); font-size: var(--sem-fs-text-lg); line-height: var(--sem-lh-text-lg); }
+
+  /* Style — primary */
+  .btn--primary { background: var(--sem-bg-brand-solid); color: var(--sem-text-primary-default); }
+  .btn--primary:hover:not(:disabled):not(.is-disabled),
+  .btn--primary.is-hover { background: var(--sem-bg-brand-solid-focus); }
+  .btn--primary:disabled, .btn--primary.is-disabled {
+    background: var(--sem-bg-brand-disabled);
+    color: var(--sem-text-primary-disabled);
+  }
+
+  /* Style — secondary */
+  .btn--secondary { background: var(--sem-bg-secondary-default); color: var(--sem-text-primary-default); }
+  .btn--secondary:hover:not(:disabled):not(.is-disabled),
+  .btn--secondary.is-hover { background: var(--sem-bg-secondary-default-foc); }
+  .btn--secondary:disabled, .btn--secondary.is-disabled {
+    /* No semantic disabled-bg token for secondary — bg stays at default */
+    color: var(--sem-text-primary-disabled);
+  }
+
+  /* Style — tertiary */
+  .btn--tertiary { background: transparent; color: var(--sem-text-brand-default); }
+  /* No defined hover for tertiary in tokens.json */
+  .btn--tertiary:disabled, .btn--tertiary.is-disabled {
+    color: var(--sem-text-primary-disabled);
+  }
+
+  /* Icon-only — square, symmetric padding */
+  .btn--icon-only { padding-left: var(--sem-space-sm); padding-right: var(--sem-space-sm); }
+  .btn--icon-only.btn--sm { width: var(--sem-ch-sm); }
+  .btn--icon-only.btn--md { width: var(--sem-ch-md); }
+  .btn--icon-only.btn--lg { width: var(--sem-ch-lg); }
+
+  /* Icon glyph wrapper */
+  .btn__icon { display: inline-flex; align-items: center; }
+  .btn__icon svg { display: block; }
+  .btn--sm .btn__icon svg { width: var(--sem-icon-sm); height: var(--sem-icon-sm); }
+  .btn--md .btn__icon svg { width: var(--sem-icon-md); height: var(--sem-icon-md); }
+  .btn--lg .btn__icon svg { width: var(--sem-icon-lg); height: var(--sem-icon-lg); }
+  .btn--primary .btn__icon, .btn--secondary .btn__icon { color: var(--sem-icon-primary-default); }
+  .btn--tertiary .btn__icon { color: var(--sem-icon-brand-default); }
+  .btn--primary:disabled .btn__icon, .btn--primary.is-disabled .btn__icon,
+  .btn--secondary:disabled .btn__icon, .btn--secondary.is-disabled .btn__icon,
+  .btn--tertiary:disabled .btn__icon, .btn--tertiary.is-disabled .btn__icon {
+    color: var(--sem-icon-primary-disabled);
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <p class="meta">atoms / button</p>
+    <h1>Button</h1>
+    <p class="lede">Standalone interactive button. Three style families, three sizes, and an icon-only mode combine into 18 variants. Anatomy: <code>LeftIcon</code> · <code>Label</code> · <code>RightIcon</code>, centered horizontal flex. Label is hidden when <code>IconOnly=true</code>; in that mode the LeftIcon slot carries the single visible glyph.</p>
+    <p class="meta" style="margin-top: 16px;">Source: figma node <code>106:43</code> · spec: <code>./button.tokens.json</code></p>
+  </header>
+
+  <h2>Anatomy</h2>
+  <p>Three slots stacked horizontally inside a fixed-height container, centered on both axes.</p>
+  <div class="surface">
+    <div class="anatomy-diagram">
+      <span class="anatomy-piece">LeftIcon</span>
+      <span class="anatomy-piece">Label</span>
+      <span class="anatomy-piece">RightIcon</span>
+    </div>
+    <table style="margin-top: 16px;">
+      <thead><tr><th>Node</th><th>Type</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td><code>container</code></td><td>FRAME</td><td>Auto-layout HORIZONTAL, primaryAxis=AUTO/FIXED, counterAxis=FIXED.</td></tr>
+        <tr><td><code>LeftIcon</code></td><td>INSTANCE</td><td>Leading-icon slot. Visibility driven by the <code>Show left icon</code> boolean on IconOnly=false variants; hardcoded <code>true</code> on IconOnly=true.</td></tr>
+        <tr><td><code>Label</code></td><td>TEXT</td><td>Label slot. Visibility hardcoded <code>false</code> on IconOnly=true variants.</td></tr>
+        <tr><td><code>RightIcon</code></td><td>INSTANCE</td><td>Trailing-icon slot. Visibility driven by <code>Show right icon</code> on IconOnly=false; hardcoded <code>false</code> on IconOnly=true.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Default state — full variant matrix</h2>
+  <p>All 18 variants. Buttons are real interactive elements — hover and click them to see states.</p>
+
+  <h3>Style = primary</h3>
+  <div class="surface stack">
+    <div class="grid-row">
+      <span class="lab">sm · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--primary btn--sm">Button</button>
+        <button class="btn btn--primary btn--sm"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--primary btn--sm">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">md · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--primary btn--md">Button</button>
+        <button class="btn btn--primary btn--md"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--primary btn--md">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">lg · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--primary btn--lg">Button</button>
+        <button class="btn btn--primary btn--lg"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--primary btn--lg">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">IconOnly=true</span>
+      <div class="row">
+        <button class="btn btn--primary btn--sm btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+        <button class="btn btn--primary btn--md btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+        <button class="btn btn--primary btn--lg btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+  <h3>Style = secondary</h3>
+  <div class="surface stack">
+    <div class="grid-row">
+      <span class="lab">sm · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--secondary btn--sm">Button</button>
+        <button class="btn btn--secondary btn--sm"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--secondary btn--sm">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">md · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--secondary btn--md">Button</button>
+        <button class="btn btn--secondary btn--md"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--secondary btn--md">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">lg · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--secondary btn--lg">Button</button>
+        <button class="btn btn--secondary btn--lg"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--secondary btn--lg">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">IconOnly=true</span>
+      <div class="row">
+        <button class="btn btn--secondary btn--sm btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+        <button class="btn btn--secondary btn--md btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+        <button class="btn btn--secondary btn--lg btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+  <h3>Style = tertiary</h3>
+  <div class="surface stack">
+    <div class="grid-row">
+      <span class="lab">sm · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--tertiary btn--sm">Button</button>
+        <button class="btn btn--tertiary btn--sm"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--tertiary btn--sm">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">md · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--tertiary btn--md">Button</button>
+        <button class="btn btn--tertiary btn--md"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--tertiary btn--md">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">lg · IconOnly=false</span>
+      <div class="row">
+        <button class="btn btn--tertiary btn--lg">Button</button>
+        <button class="btn btn--tertiary btn--lg"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>Button</button>
+        <button class="btn btn--tertiary btn--lg">Button<span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span></button>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="lab">IconOnly=true</span>
+      <div class="row">
+        <button class="btn btn--tertiary btn--sm btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+        <button class="btn btn--tertiary btn--md btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+        <button class="btn btn--tertiary btn--lg btn--icon-only" aria-label="Action"><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+  <h2>State model — documented but not built as variants</h2>
+  <p>Hover and disabled bindings are recorded in <code>button.tokens.json</code> but not implemented as Figma variants. The hover state below uses the <code>.is-hover</code> modifier to render statically; disabled uses the native <code>disabled</code> attribute.</p>
+
+  <h3>Default · Hover · Disabled (md)</h3>
+  <div class="surface">
+    <table>
+      <thead><tr><th></th><th>default</th><th>hover</th><th>disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>primary</strong></td>
+          <td><button class="btn btn--primary btn--md">Button</button></td>
+          <td><button class="btn btn--primary btn--md is-hover">Button</button></td>
+          <td><button class="btn btn--primary btn--md" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td><strong>secondary</strong></td>
+          <td><button class="btn btn--secondary btn--md">Button</button></td>
+          <td><button class="btn btn--secondary btn--md is-hover">Button</button></td>
+          <td><button class="btn btn--secondary btn--md" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td><strong>tertiary</strong></td>
+          <td><button class="btn btn--tertiary btn--md">Button</button></td>
+          <td><button class="btn btn--tertiary btn--md">Button</button></td>
+          <td><button class="btn btn--tertiary btn--md" disabled>Button</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top: 16px;">
+      <p><strong>Tertiary hover</strong> is undefined in <code>button.tokens.json</code> (the <code>style.tertiary.hover</code> block is empty) — the rendered hover cell intentionally matches the default cell.</p>
+    </div>
+    <div class="note">
+      <p><strong>Secondary disabled background</strong> stays at the default token because no <code>background/secondary/disabled</code> semantic token exists. Only the foreground dims via <code>text/primary/disabled</code>.</p>
+    </div>
+    <div class="note">
+      <p><strong>Active state</strong> has no semantic token. The CSS uses <code>filter: brightness(0.95)</code> as a stopgap — try clicking and holding.</p>
+    </div>
+  </div>
+
+  <h2>Properties</h2>
+  <table>
+    <thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><code>Label</code></td><td>TEXT</td><td><code>"Button"</code></td><td>Text content of the label slot. Hidden when IconOnly=true.</td></tr>
+      <tr><td><code>Show left icon</code></td><td>BOOLEAN</td><td><code>false</code></td><td>Toggles the LeftIcon visibility on IconOnly=false variants. Detached on IconOnly=true variants (the icon is always shown there).</td></tr>
+      <tr><td><code>Show right icon</code></td><td>BOOLEAN</td><td><code>false</code></td><td>Toggles the RightIcon visibility on IconOnly=false variants. Detached on IconOnly=true variants (the icon is always hidden there).</td></tr>
+      <tr><td><code>Left icon</code></td><td>INSTANCE_SWAP</td><td><code>arrow-narrow-left</code> (<code>26:424</code>)</td><td>Swap target for the LeftIcon slot.</td></tr>
+      <tr><td><code>Right icon</code></td><td>INSTANCE_SWAP</td><td><code>chevron-right</code> (<code>26:349</code>)</td><td>Swap target for the RightIcon slot.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Token bindings</h2>
+
+  <h3>Layout (uniform across variants)</h3>
+  <table>
+    <thead><tr><th>Property</th><th>Alias</th></tr></thead>
+    <tbody>
+      <tr><td>padding-top</td><td><code class="alias">{semantic-size.spacing.none}</code></td></tr>
+      <tr><td>padding-bottom</td><td><code class="alias">{semantic-size.spacing.none}</code></td></tr>
+      <tr><td>border-radius (all corners)</td><td><code class="alias">{semantic-size.border-radius.md}</code></td></tr>
+      <tr><td>stroke</td><td><em>none — no border in any variant</em></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Size — IconOnly=false</h3>
+  <table>
+    <thead><tr><th>Size</th><th>height</th><th>padding-x</th><th>gap</th><th>icon-size</th></tr></thead>
+    <tbody>
+      <tr><td>sm</td><td><code class="alias">{semantic-size.component-height.sm}</code></td><td><code class="alias">{semantic-size.spacing.md}</code></td><td><code class="alias">{semantic-size.spacing.xs}</code></td><td><code class="alias">{semantic-size.icon.sm}</code></td></tr>
+      <tr><td>md</td><td><code class="alias">{semantic-size.component-height.md}</code></td><td><code class="alias">{semantic-size.spacing.lg}</code></td><td><code class="alias">{semantic-size.spacing.sm}</code></td><td><code class="alias">{semantic-size.icon.md}</code></td></tr>
+      <tr><td>lg</td><td><code class="alias">{semantic-size.component-height.lg}</code></td><td><code class="alias">{semantic-size.spacing.xl}</code></td><td><code class="alias">{semantic-size.spacing.sm}</code></td><td><code class="alias">{semantic-size.icon.lg}</code></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Size — IconOnly=true overrides</h3>
+  <table>
+    <thead><tr><th>Size</th><th>width</th><th>padding-x</th></tr></thead>
+    <tbody>
+      <tr><td>sm</td><td><code class="alias">{semantic-size.component-height.sm}</code></td><td><code class="alias">{semantic-size.spacing.sm}</code></td></tr>
+      <tr><td>md</td><td><code class="alias">{semantic-size.component-height.md}</code></td><td><code class="alias">{semantic-size.spacing.sm}</code></td></tr>
+      <tr><td>lg</td><td><code class="alias">{semantic-size.component-height.lg}</code></td><td><code class="alias">{semantic-size.spacing.sm}</code></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Style — colors per state</h3>
+  <table>
+    <thead><tr><th>Style</th><th>State</th><th>background</th><th>text</th><th>icon</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3">primary</td><td>default</td><td><code class="alias">{semantic-colors.background.brand.solid}</code></td><td><code class="alias">{semantic-colors.text.primary.default}</code></td><td><em>not bound — see notes</em></td></tr>
+      <tr><td>hover</td><td><code class="alias">{semantic-colors.background.brand.solid-focus}</code></td><td>—</td><td>—</td></tr>
+      <tr><td>disabled</td><td><code class="alias">{semantic-colors.background.brand.disabled}</code></td><td><code class="alias">{semantic-colors.text.primary.disabled}</code></td><td><code class="alias">{semantic-colors.icon.primary.disabled}</code></td></tr>
+      <tr><td rowspan="3">secondary</td><td>default</td><td><code class="alias">{semantic-colors.background.secondary.default}</code></td><td><code class="alias">{semantic-colors.text.primary.default}</code></td><td><em>not bound</em></td></tr>
+      <tr><td>hover</td><td><code class="alias">{semantic-colors.background.secondary.default-focus}</code></td><td>—</td><td>—</td></tr>
+      <tr><td>disabled</td><td><em>no token — bg stays at default</em></td><td><code class="alias">{semantic-colors.text.primary.disabled}</code></td><td><code class="alias">{semantic-colors.icon.primary.disabled}</code></td></tr>
+      <tr><td rowspan="3">tertiary</td><td>default</td><td><em>none</em></td><td><code class="alias">{semantic-colors.text.brand.default}</code></td><td><em>not bound</em></td></tr>
+      <tr><td>hover</td><td><em>undefined</em></td><td>—</td><td>—</td></tr>
+      <tr><td>disabled</td><td><em>none</em></td><td><code class="alias">{semantic-colors.text.primary.disabled}</code></td><td><code class="alias">{semantic-colors.icon.primary.disabled}</code></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Typography</h3>
+  <p>Family and weight are constant; size and line-height vary by Size.</p>
+  <table>
+    <thead><tr><th>Size</th><th>font-family</th><th>font-style</th><th>font-size</th><th>line-height</th></tr></thead>
+    <tbody>
+      <tr><td>sm</td><td><code class="alias">{semantic-typography.font-family.text}</code></td><td><code class="alias">{semantic-typography.font-weight.medium}</code></td><td><code class="alias">{semantic-typography.font-size.text-sm}</code></td><td><code class="alias">{semantic-typography.line-height.text-sm}</code></td></tr>
+      <tr><td>md</td><td><code class="alias">{semantic-typography.font-family.text}</code></td><td><code class="alias">{semantic-typography.font-weight.medium}</code></td><td><code class="alias">{semantic-typography.font-size.text-md}</code></td><td><code class="alias">{semantic-typography.line-height.text-md}</code></td></tr>
+      <tr><td>lg</td><td><code class="alias">{semantic-typography.font-family.text}</code></td><td><code class="alias">{semantic-typography.font-weight.medium}</code></td><td><code class="alias">{semantic-typography.font-size.text-lg}</code></td><td><code class="alias">{semantic-typography.line-height.text-lg}</code></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Code example</h2>
+  <p>Markup pattern. Variant classes swap to change Style, Size, and IconOnly.</p>
+  <div class="surface">
+<pre style="margin: 0; padding: 16px; background: var(--c-neutral-900); color: var(--c-base-white); border-radius: 6px; font-size: 12.5px; line-height: 1.6; overflow-x: auto;"><code style="background: transparent; color: inherit; padding: 0;">&lt;!-- Style=primary, Size=md, IconOnly=false, both icons hidden --&gt;
+&lt;button class="btn btn--primary btn--md"&gt;Button&lt;/button&gt;
+
+&lt;!-- With leading icon --&gt;
+&lt;button class="btn btn--primary btn--md"&gt;
+  &lt;span class="btn__icon"&gt;&lt;svg ...&gt;&lt;/svg&gt;&lt;/span&gt;
+  Button
+&lt;/button&gt;
+
+&lt;!-- Icon-only (Size=md) --&gt;
+&lt;button class="btn btn--primary btn--md btn--icon-only" aria-label="Action"&gt;
+  &lt;span class="btn__icon"&gt;&lt;svg ...&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Disabled --&gt;
+&lt;button class="btn btn--primary btn--md" disabled&gt;Button&lt;/button&gt;</code></pre>
+  </div>
+
+  <h2>Known issues / gaps (from <code>$notes</code>)</h2>
+  <div class="note"><p><strong>states-not-built-as-variants</strong> — Hover and disabled bindings are recorded for downstream consumers but are NOT implemented as Figma variants. Only the default state of each (Style × Size × IconOnly) combination is rendered.</p></div>
+  <div class="note"><p><strong>active-state-no-token</strong> — No semantic token covers the active/pressed state. Stopgap: <code>filter: brightness(0.95)</code>. System-level gap.</p></div>
+  <div class="note"><p><strong>icon-color-binding-gap</strong> — Audit returned <code>colorVar: null</code> for every LeftIcon and RightIcon across all 18 variants. The component-set description claims <code>icon/primary/default</code> (primary, secondary) and <code>icon/brand/default</code> (tertiary), but those bindings were not detected on the variant nodes. Re-binding pass recommended.</p></div>
+  <div class="note"><p><strong>disabled-bg-gap-secondary-tertiary</strong> — Only <code>background/brand/disabled</code> exists. Secondary and tertiary disabled blocks intentionally omit a background alias.</p></div>
+  <div class="note"><p><strong>tertiary-hover-undefined</strong> — Component-set description proposes <code>background/brand/default</code> as a tertiary hover treatment but no token authoritatively covers it. <code>style.tertiary.hover</code> is empty.</p></div>
+  <div class="note"><p><strong>focus-state-empty</strong> — No focus-visible state implemented in the component. The doc page applies a generic <code>outline</code> as a placeholder for keyboard accessibility, but it is not driven by a token binding.</p></div>
+  <div class="note"><p><strong>icon-only-visibility-detach</strong> — On IconOnly=true variants, LeftIcon/RightIcon have their <code>visible</code> componentPropertyReferences detached and visibility is hardcoded. Required because Figma boolean visibility properties are shared globally across variants of a set.</p></div>
+
+  <footer style="margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--c-neutral-200); color: var(--c-neutral-700); font-size: 12px;">
+    <p>Generated from <code>./button.tokens.json</code> · Figma source <code>vdVmrWthRNIyM1lf2XThdZ#106:43</code></p>
+  </footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,117 @@
+# CLAUDE.md — [PROJECT NAME]
+
+> **How to use this template:**
+> 1. Save this file as `CLAUDE.md` in your project root.
+> 2. Replace every `[PLACEHOLDER]` with content specific to your system.
+> 3. Delete the `> ⓘ` commentary lines once you've read them — they're guidance, not part of the doc.
+> 4. Commit it alongside your code. Update it the moment you discover a rule.
+
+---
+
+## 1. Project identity
+
+> ⓘ One or two lines: what this project is, what it anchors. Be concrete.
+
+[E.g. "Keeta — design system for a Dubai-based food-delivery app. 75 components, 547 tokens, iOS-first."]
+
+---
+
+## 2. Architecture summary
+
+> ⓘ The foundational mental model. How does your system actually work? Tiers, flow, discipline. 3–5 lines max.
+
+```
+[Primitive tokens] → [Semantic tokens] → [Component tokens]
+        ↓                  ↓                    ↓
+    raw values      purpose-driven        per-component
+                      (text/bg/etc)         overrides
+```
+
+**Discipline:** [E.g. "Components reference semantic tokens only, never primitives directly. Semantic tokens alias to primitives. Single source of truth lives in `tokens/design-tokens.json`."]
+
+---
+
+## 3. Reference tables
+
+> ⓘ Key values the agent will look up frequently. Token collection names, file IDs, brand colors, anything you cite often. Tables work better than prose.
+
+**Token collections:**
+| Collection | Purpose | Modes |
+|---|---|---|
+| Primitive: Colors | Raw color values | — |
+| Semantic: Colors | Purpose-driven aliases | Light, Dark |
+| [...] | [...] | [...] |
+
+**Brand reference:**
+| Hue | Role | Key value |
+|---|---|---|
+| [yellow] | Brand | [#FFD600] |
+| [neutral] | Text/borders | [#181D27] |
+
+**File references:**
+- Figma file key: `[FILE_KEY]`
+- Tokens source: `tokens/design-tokens.json`
+- Component registry: `knowledge-base/components.json`
+
+---
+
+## 4. Conventions
+
+> ⓘ Naming patterns, scopes, file layout. The "how we name things" answer. Keep it short — list patterns, not exceptions.
+
+**Variable naming:**
+- Primitive: `{category}/{property}/{value}` — e.g. `color/yellow/500`
+- Semantic: `{property}/{role}-{state}` — e.g. `text/primary-default`
+- Component: `{component}/{property}/{state}` — e.g. `button/background/hover`
+
+**File layout:**
+- `foundations/` — primitive tokens
+- `tokens/` — semantic tokens
+- `components/{tier}/{name}/` — per-component (atom / molecule / organism / pattern)
+- `knowledge-base/` — agent-queryable structured data
+
+---
+
+## 5. Critical rules
+
+> ⓘ Numbered, terse, each with a one-line reason. These are the rules the agent must never break. Start with 3. Grow to 30 over time.
+
+1. **Semantic only** — components reference semantic tokens, never primitives directly. *Why:* a single primitive change must ripple to every component that uses the role.
+2. **4px grid** — all sizing is multiples of 4. *Why:* visual rhythm; off-grid values create jagged compositions.
+3. **Hug content** — use hug-content sizing in components, never fixed height. *Why:* fixed sizes break with type-scale changes and i18n.
+
+> ⓘ Add more as you discover them. Three is the floor; thirty is a mature system.
+
+---
+
+## 6. Workflow patterns
+
+> ⓘ How the agent should approach work. Not what it does — how it does it. Disciplines, not rules.
+
+- **Propose-then-execute** — for any non-trivial change, propose the structure first and wait for approval. Never silent generation.
+- **Inspect first** — read the current state before writing. Don't assume.
+- **Atomic scripts** — one focused operation per script. Easier to review, easier to undo.
+- **Honest tool limits** — if the API can't do what's asked, say so. Don't fake it.
+
+---
+
+## 7. File references
+
+> ⓘ Paths to related context the agent should know about. Helps with navigation when the agent needs deeper info.
+
+- `docs/components/` — full component specs (Pandya tier model)
+- `docs/process/` — process docs and decision logs
+- `tokens/design-tokens.json` — token source of truth
+- `.claude/skills/` — reusable workflows
+- Parent `CLAUDE.md`: [path if nested]
+
+---
+
+## 8. Discovered rules
+
+> ⓘ The living log. Append the moment a rule surfaces. Date it. Don't tidy.
+> Examples below — replace with your own.
+
+- **2026-04-18** — SF Pro weight is `Semibold` (one word), not `Semi Bold`. Inter uses `Semi Bold`. Don't let the agent normalize.
+- **2026-04-22** — `hiddenFromPublishing` cannot be set via the Figma Plugin API; toggle manually in the Variables panel UI.
+- **[Add yours as you discover them.]**

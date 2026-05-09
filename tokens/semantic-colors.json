@@ -1,0 +1,98 @@
+{
+  "$collection": "Semantic: Colors",
+  "$slug": "semantic-colors",
+  "$modes": ["Light", "Dark"],
+  "$defaultMode": "Light",
+  "background": {
+    "accent": {
+      "default":     { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.teal.50" },  "Dark": { "$alias": "primitive-colors.teal.50" } } },
+      "solid":       { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.teal.500" }, "Dark": { "$alias": "primitive-colors.teal.500" } } },
+      "solid-focus": { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.teal.700" }, "Dark": { "$alias": "primitive-colors.teal.700" } } }
+    },
+    "brand": {
+      "default":       { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.yellow.100" }, "Dark": { "$alias": "primitive-colors.yellow.900" } } },
+      "default-focus": { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.yellow.200" }, "Dark": { "$alias": "primitive-colors.yellow.200" } } },
+      "disabled":      { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.300" }, "Dark": { "$alias": "primitive-colors.neutral.300" } } },
+      "inverse":       { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.900" }, "Dark": { "$alias": "primitive-colors.base.white" } } },
+      "solid":         { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.yellow.500" }, "Dark": { "$alias": "primitive-colors.yellow.500" } } },
+      "solid-focus":   { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.yellow.600" }, "Dark": { "$alias": "primitive-colors.yellow.600" } } }
+    },
+    "error": {
+      "default": { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.red.100" }, "Dark": { "$alias": "primitive-colors.red.100" } } },
+      "solid":   { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.red.500" }, "Dark": { "$alias": "primitive-colors.red.600" } } }
+    },
+    "info": {
+      "default": { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.blue.100" }, "Dark": { "$alias": "primitive-colors.blue.100" } } },
+      "solid":   { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.blue.500" }, "Dark": { "$alias": "primitive-colors.blue.500" } } }
+    },
+    "primary": {
+      "alternative":   { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.base.white" },    "Dark": { "$alias": "primitive-colors.base.white" } } },
+      "default":       { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.base.white" },    "Dark": { "$alias": "primitive-colors.neutral.900" } } },
+      "default-focus": { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.100" }, "Dark": { "$alias": "primitive-colors.neutral.100" } } },
+      "inverse":       { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.900" }, "Dark": { "$alias": "primitive-colors.neutral.900" } } },
+      "solid":         { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.900" }, "Dark": { "$alias": "primitive-colors.neutral.100" } } }
+    },
+    "secondary": {
+      "default":       { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.200" }, "Dark": { "$alias": "primitive-colors.neutral.800" } } },
+      "default-focus": { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.200" }, "Dark": { "$alias": "primitive-colors.neutral.200" } } },
+      "solid":         { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.900" }, "Dark": { "$alias": "primitive-colors.neutral.900" } } }
+    },
+    "success": {
+      "default": { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.green.50" },  "Dark": { "$alias": "primitive-colors.green.50" } } },
+      "solid":   { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.green.400" }, "Dark": { "$alias": "primitive-colors.green.400" } } }
+    },
+    "warning": {
+      "default": { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.orange.50" },  "Dark": { "$alias": "primitive-colors.orange.50" } } },
+      "solid":   { "$type": "COLOR", "$scopes": ["FRAME_FILL", "SHAPE_FILL"], "$values": { "Light": { "$alias": "primitive-colors.orange.500" }, "Dark": { "$alias": "primitive-colors.orange.500" } } }
+    }
+  },
+  "border": {
+    "accent": {
+      "default": { "$type": "COLOR", "$scopes": ["STROKE_COLOR"], "$values": { "Light": { "$alias": "primitive-colors.teal.500" }, "Dark": { "$alias": "primitive-colors.teal.500" } } }
+    },
+    "brand": {
+      "default": { "$type": "COLOR", "$scopes": ["STROKE_COLOR"], "$values": { "Light": { "$alias": "primitive-colors.yellow.500" }, "Dark": { "$alias": "primitive-colors.yellow.500" } } }
+    },
+    "error": {
+      "default": { "$type": "COLOR", "$scopes": ["STROKE_COLOR"], "$values": { "Light": { "$alias": "primitive-colors.red.300" }, "Dark": { "$alias": "primitive-colors.red.300" } } },
+      "solid":   { "$type": "COLOR", "$scopes": ["STROKE_COLOR"], "$values": { "Light": { "$alias": "primitive-colors.red.500" }, "Dark": { "$alias": "primitive-colors.red.500" } } }
+    },
+    "primary": {
+      "default": { "$type": "COLOR", "$scopes": ["STROKE_COLOR"], "$values": { "Light": { "$alias": "primitive-colors.neutral.300" }, "Dark": { "$alias": "primitive-colors.neutral.700" } } },
+      "inverse": { "$type": "COLOR", "$scopes": ["STROKE_COLOR"], "$values": { "Light": { "$alias": "primitive-colors.base.white" },    "Dark": { "$alias": "primitive-colors.base.white" } } }
+    }
+  },
+  "icon": {
+    "brand": {
+      "default": { "$type": "COLOR", "$scopes": ["SHAPE_FILL", "TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.yellow.700" }, "Dark": { "$alias": "primitive-colors.yellow.700" } } }
+    },
+    "primary": {
+      "default":  { "$type": "COLOR", "$scopes": ["SHAPE_FILL", "TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.900" }, "Dark": { "$alias": "primitive-colors.neutral.900" } } },
+      "disabled": { "$type": "COLOR", "$scopes": ["SHAPE_FILL", "TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.400" }, "Dark": { "$alias": "primitive-colors.neutral.400" } } },
+      "inverse":  { "$type": "COLOR", "$scopes": ["SHAPE_FILL", "TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.base.white" },    "Dark": { "$alias": "primitive-colors.base.white" } } }
+    },
+    "secondary": {
+      "default": { "$type": "COLOR", "$scopes": ["SHAPE_FILL", "TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.700" }, "Dark": { "$alias": "primitive-colors.neutral.700" } } }
+    },
+    "tertiary": {
+      "default": { "$type": "COLOR", "$scopes": ["SHAPE_FILL", "TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.600" }, "Dark": { "$alias": "primitive-colors.neutral.600" } } }
+    }
+  },
+  "text": {
+    "brand": {
+      "default": { "$type": "COLOR", "$scopes": ["TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.yellow.700" }, "Dark": { "$alias": "primitive-colors.yellow.400" } } },
+      "inverse": { "$type": "COLOR", "$scopes": ["TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.900" }, "Dark": { "$alias": "primitive-colors.neutral.900" } } }
+    },
+    "primary": {
+      "default":  { "$type": "COLOR", "$scopes": ["TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.900" }, "Dark": { "$alias": "primitive-colors.base.white" } } },
+      "disabled": { "$type": "COLOR", "$scopes": ["TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.400" }, "Dark": { "$alias": "primitive-colors.neutral.400" } } },
+      "inverse":  { "$type": "COLOR", "$scopes": ["TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.base.white" },    "Dark": { "$alias": "primitive-colors.base.white" } } }
+    },
+    "secondary": {
+      "default": { "$type": "COLOR", "$scopes": ["TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.700" }, "Dark": { "$alias": "primitive-colors.neutral.200" } } }
+    },
+    "tertiary": {
+      "default": { "$type": "COLOR", "$scopes": ["TEXT_FILL"], "$values": { "Light": { "$alias": "primitive-colors.neutral.500" }, "Dark": { "$alias": "primitive-colors.neutral.500" } } }
+    }
+  }
+}

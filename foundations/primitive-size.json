@@ -1,0 +1,29 @@
+{
+  "$collection": "Primitive: Size",
+  "$slug": "primitive-size",
+  "$modes": ["Value"],
+  "$defaultMode": "Value",
+  "scale": {
+    "0":   { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 0 } },
+    "4":   { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 4 } },
+    "8":   { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 8 } },
+    "12":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 12 } },
+    "16":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 16 } },
+    "20":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 20 } },
+    "24":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 24 } },
+    "28":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 28 } },
+    "32":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 32 } },
+    "36":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 36 } },
+    "40":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 40 } },
+    "44":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 44 } },
+    "48":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 48 } },
+    "52":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 52 } },
+    "56":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 56 } },
+    "64":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 64 } },
+    "80":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 80 } },
+    "84":  { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 84 } },
+    "140": { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 140 } },
+    "280": { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 280 } },
+    "999": { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS", "WIDTH_HEIGHT", "GAP"], "$values": { "Value": 999 } }
+  }
+}

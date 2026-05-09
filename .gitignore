@@ -1,0 +1,9 @@
+.DS_Store
+*.swp
+*.swo
+*~
+.audit-snapshot.json
+audit-report.json
+audit-baseline.json
+extracted/
+node_modules/

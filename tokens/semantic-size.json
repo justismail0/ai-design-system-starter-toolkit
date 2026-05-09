@@ -1,0 +1,49 @@
+{
+  "$collection": "Semantic: Size",
+  "$slug": "semantic-size",
+  "$modes": ["Value"],
+  "$defaultMode": "Value",
+  "border-radius": {
+    "none": { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS"], "$values": { "Value": { "$alias": "primitive-size.scale.0" } } },
+    "xs":   { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS"], "$values": { "Value": { "$alias": "primitive-size.scale.4" } } },
+    "sm":   { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS"], "$values": { "Value": { "$alias": "primitive-size.scale.8" } } },
+    "md":   { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS"], "$values": { "Value": { "$alias": "primitive-size.scale.12" } } },
+    "lg":   { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS"], "$values": { "Value": { "$alias": "primitive-size.scale.16" } } },
+    "full": { "$type": "FLOAT", "$scopes": ["CORNER_RADIUS"], "$values": { "Value": { "$alias": "primitive-size.scale.999" } } }
+  },
+  "border-width": {
+    "none": { "$type": "FLOAT", "$scopes": ["STROKE_FLOAT"], "$values": { "Value": 0 } },
+    "sm":   { "$type": "FLOAT", "$scopes": ["STROKE_FLOAT"], "$values": { "Value": 1 } },
+    "md":   { "$type": "FLOAT", "$scopes": ["STROKE_FLOAT"], "$values": { "Value": 2 } },
+    "lg":   { "$type": "FLOAT", "$scopes": ["STROKE_FLOAT"], "$values": { "Value": 4 } }
+  },
+  "component-height": {
+    "xs":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.28" } } },
+    "sm":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.36" } } },
+    "md":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.44" } } },
+    "lg":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.48" } } },
+    "xl":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.52" } } },
+    "2xl": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.56" } } },
+    "3xl": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.64" } } },
+    "4xl": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.80" } } },
+    "5xl": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.84" } } }
+  },
+  "icon": {
+    "sm": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.16" } } },
+    "md": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.20" } } },
+    "lg": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.24" } } },
+    "xl": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT"], "$values": { "Value": { "$alias": "primitive-size.scale.32" } } }
+  },
+  "spacing": {
+    "none": { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.0" } } },
+    "xs":   { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.4" } } },
+    "sm":   { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.8" } } },
+    "md":   { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.12" } } },
+    "lg":   { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.16" } } },
+    "xl":   { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.20" } } },
+    "2xl":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.24" } } },
+    "3xl":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.32" } } },
+    "4xl":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.40" } } },
+    "5xl":  { "$type": "FLOAT", "$scopes": ["WIDTH_HEIGHT", "GAP"], "$values": { "Value": { "$alias": "primitive-size.scale.48" } } }
+  }
+}

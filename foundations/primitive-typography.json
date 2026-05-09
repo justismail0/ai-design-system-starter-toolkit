@@ -1,0 +1,47 @@
+{
+  "$collection": "Primitive: Typography",
+  "$slug": "primitive-typography",
+  "$modes": ["Value"],
+  "$defaultMode": "Value",
+  "font-family": {
+    "inter": { "$type": "STRING", "$scopes": ["FONT_FAMILY"], "$values": { "Value": "Inter" } }
+  },
+  "font-size": {
+    "1":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 11 } },
+    "2":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 12 } },
+    "3":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 16 } },
+    "4":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 20 } },
+    "5":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 24 } },
+    "6":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 28 } },
+    "7":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 32 } },
+    "8":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 36 } },
+    "9":  { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 40 } },
+    "10": { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 48 } },
+    "11": { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 60 } },
+    "12": { "$type": "FLOAT", "$scopes": ["FONT_SIZE"], "$values": { "Value": 72 } }
+  },
+  "font-weight": {
+    "black":     { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": "Black" } },
+    "bold":      { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": "Bold" } },
+    "extrabold": { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": "Extra Bold" } },
+    "medium":    { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": "Medium" } },
+    "regular":   { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": "Regular" } },
+    "semibold":  { "$type": "STRING", "$scopes": ["FONT_STYLE"], "$values": { "Value": "Semi Bold" } }
+  },
+  "line-height": {
+    "1":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 16 } },
+    "2":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 20 } },
+    "3":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 24 } },
+    "4":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 28 } },
+    "5":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 32 } },
+    "6":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 36 } },
+    "7":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 40 } },
+    "8":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 44 } },
+    "9":  { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 48 } },
+    "10": { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 56 } },
+    "11": { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 60 } },
+    "12": { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 72 } },
+    "13": { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 80 } },
+    "14": { "$type": "FLOAT", "$scopes": ["LINE_HEIGHT"], "$values": { "Value": 88 } }
+  }
+}
