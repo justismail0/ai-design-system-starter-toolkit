@@ -1,5 +1,5 @@
 {
-  "$source": "figma://file/vdVmrWthRNIyM1lf2XThdZ?node-id=106:43",
+  "$source": "figma://file/[YOUR_FIGMA_FILE_KEY]?node-id=106:43",
   "$component": "Button",
   "$figmaNodeId": "106:43",
   "$description": "Standalone interactive button. Three style families, three sizes, and an icon-only mode combine into 18 variants. Anatomy: LeftIcon · Label · RightIcon, centered horizontal flex. Label is hidden when IconOnly=true; in that mode the LeftIcon slot carries the single visible glyph.",

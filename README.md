@@ -23,7 +23,7 @@ Click **"Use this template"** on GitHub to create your own repo, or download the
 Open the session Figma file (link provided in the session). Click **Duplicate to your drafts**. Copy the file key from the URL — it's the alphanumeric string after `/design/`:
 
 ```
-https://www.figma.com/design/vdVmrWthRNIyM1lf2XThdZ/...
+https://www.figma.com/design/AbCdEfGhIjKlMnOpQrStUv/...
                                ^^^^^^^^^^^^^^^^^^^^^^
                                this is the file key
 ```

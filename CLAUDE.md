@@ -7,7 +7,7 @@ and screen.
 > **Setup:** Duplicate the session Figma file to your Drafts. Copy the
 > file key from the URL (the string after `/design/`). Replace
 > `[YOUR_FIGMA_FILE_KEY]` everywhere in this file with your key.
-> Example key: `vdVmrWthRNIyM1lf2XThdZ`
+> Example key: `AbCdEfGhIjKlMnOpQrStUv`
 
 **There is no build, lint, or test command — every workflow runs
 through `use_figma`.**

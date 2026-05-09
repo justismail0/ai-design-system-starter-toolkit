@@ -1,5 +1,5 @@
 <!--
-  Keeta component documentation template v1.
+  Component documentation template v1.
   Instructions:
   · Replace every <placeholder> with concrete content.
   · Do NOT remove the HTML comment blocks — they carry the rules. Keep them in
